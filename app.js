@@ -1,4 +1,14 @@
-var app = angular.module('WanderList', []);
+var app = angular.module('WanderList', ['ui.router']);
+
+app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+  $stateProvider
+    .state('home', {
+      url: '/home',
+      templateUrl: '/home.html',
+      controller: 'DestinationsCtrl'
+    });
+  $urlRouterProvider.otherwise('home');
+}]);
 
 app.factory('destinations', [function() {
   var o = {
