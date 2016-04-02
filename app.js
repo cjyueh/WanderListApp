@@ -1,12 +1,15 @@
 var app = angular.module('WanderList', []);
 
-app.controller('DestinationsCtrl', ['$scope', function($scope) {
+app.factory('destinations', [function() {
+  var o = {
+    destinations: []
+  };
+  return o;
+}]);
+
+app.controller('DestinationsCtrl', ['$scope', 'destinations', function($scope, destinations) {
   $scope.test = 'Hello world!';
-  $scope.destinations = [
-    {name: 'place1'},
-    {name: 'place2'},
-    {name: 'place3'}
-  ];
+  $scope.destinations = destinations.destinations;
   $scope.addDestination = function() {
     if(!$scope.name || $scope.name === '') { return; }
     $scope.destinations.push({name: $scope.name});
