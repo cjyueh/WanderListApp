@@ -1,3 +1,7 @@
+body {
+	font-family: 'Oxygen', sans-serif;
+}
+
 /*------ HOME PAGE CENTERING ------*/
 html, body, .container-table {
 	height: 100%;
@@ -30,6 +34,18 @@ html, body, .container-table {
 
 #splash-title {
 	color: white;
-	font-family: 'Istok Web', sans-serif;
-	font-size: 5em;
+	font-size: 5.5em;
+	font-weight: bold;
+	letter-spacing: .1em;
+	text-shadow: 0 0 2px #cccccc;
+}
+
+#tagline {
+	color: white;
+	font-weight: bold;
+}
+
+#destination-form-label {
+	color: white;
+	font-weight: bold;
 }

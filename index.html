@@ -7,7 +7,8 @@
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-	<link href='https://fonts.googleapis.com/css?family=Istok+Web:700' rel='stylesheet' type='text/css'>
+	<!-- <link href='https://fonts.googleapis.com/css?family=Istok+Web:700' rel='stylesheet' type='text/css'> -->
+	<link href='https://fonts.googleapis.com/css?family=Oxygen:700,400' rel='stylesheet' type='text/css'>
 	<!-- angular -->
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular.js"></script>
 	<!-- custom -->
@@ -15,6 +16,7 @@
 	<script type="text/javascript" src="app.js"></script>
 	<title>WanderList</title>
 </head>
+
 <body ng-controller="DestinationsCtrl">
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
@@ -53,9 +55,17 @@
 		<div class="row vertical-center-row">
 			<div class="text-center">
 				<h1 id="splash-title">WANDERLIST</h1>
-				<div ng-repeat="location in destinations">
-					<h3>What are you doing today in {{ location }}?</h3>
-				</div>
+				<h2 id="tagline">Discover something out of the ordinary.</h2>
+				<form ng-submit="addDestination()">
+					<h3 id="destination-form-label">Where are you going today?</h3>
+					<input type="text" placeholder="City, Country" ng-model="name"></input>
+					<button type="submit">SEARCH</button>
+					<!-- search button should redirect to city show page/itinerary index page -->
+					<!-- test that addDest controller works and dest can be added to list, but list will not be visible -->
+					<div ng-repeat="destination in destinations">
+						{{ destination.name }}
+					</div>
+				</form>
 			</div>
 		</div>
 	</div>
