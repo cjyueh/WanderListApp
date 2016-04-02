@@ -2,10 +2,63 @@
 <html lang="en" ng-app="WanderList">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<!-- bootstrap -->
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Istok+Web:700' rel='stylesheet' type='text/css'>
+	<!-- angular -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular.js"></script>
+	<!-- custom -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="app.js"></script>
 	<title>WanderList</title>
 </head>
-<body ng-controller="MainCtrl">
-	<h1>WanderList</h1>
-	{{ test }}
-</body
+<body ng-controller="DestinationsCtrl">
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">wanderlist</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#">Sign Up</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Log In</a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Edit Profile</a></li>
+							<li><a href="#">Create Itinerary</a></li>
+							<li><a href="#">View Itinerary History</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="#">Log Out</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+	</nav>
+
+	<!-- <div id="home-photo"> -->
+	<div class="container container-table" id="home-photo">
+		<div class="row vertical-center-row">
+			<div class="text-center">
+				<h1 id="splash-title">WANDERLIST</h1>
+				<div ng-repeat="location in destinations">
+					<h3>What are you doing today in {{ location }}?</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- </div> -->
+</body>
 </html>
