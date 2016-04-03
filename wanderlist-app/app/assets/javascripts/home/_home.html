@@ -1,0 +1,19 @@
+<!-- homepage (invisible destinations index) -->
+<div class="container container-table" id="home-photo">
+	<div class="row vertical-center-row">
+		<div class="text-center">
+			<h1 id="home-title">WANDERLIST</h1>
+			<h2 id="tagline">Discover something out of the ordinary.</h2>
+			<form class="col-md-4 col-md-offset-4" ng-submit="addDestination()">
+				<h3 id="dest-form-label">Where are you going today?</h3>
+				<div class="input-group">
+					<input type="text" class="form-control" id="dest-input" placeholder="City, Country" ng-model="name" autofocus />
+				<span class="input-group-btn"><button type="submit" class="btn btn-default" id="dest-input-btn">GO!</button></span>
+				</div>
+				<div ng-repeat="destination in destinations">
+					<a href="#/destinations/{{$index}}">{{ destination.name }}</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
