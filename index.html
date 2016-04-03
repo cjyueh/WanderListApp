@@ -52,6 +52,7 @@
 
 	<ui-view></ui-view>
 
+	<!-- homepage (invisible destinations index) -->
 	<script type="text/ng-template" id="/home.html">
 		<div class="container container-table" id="home-photo">
 			<div class="row vertical-center-row">
@@ -60,12 +61,46 @@
 					<h2 id="tagline">Discover something out of the ordinary.</h2>
 					<form ng-submit="addDestination()">
 						<h3 id="destination-form-label">Where are you going today?</h3>
-						<input type="text" placeholder="City, Country" ng-model="name"></input>
+						<div class="form-group">
+							<input type="text" placeholder="City, Country" ng-model="name"></input>
 						<button type="submit">SEARCH</button>
+						</div>
 						<div ng-repeat="destination in destinations">
-							{{ destination.name }}
+							<a href="#/destinations/{{$index}}">{{ destination.name }}</a>
 						</div>
 					</form>
+				</div>
+			</div>
+		</div>
+	</script>
+
+	<!-- destination show page / itineraries index -->
+	<script type="text/ng-template" id="/destinations.html">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-8">
+					<h1>{{ destination.name }}</h1>
+					<form class="form-inline">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Search Itineraries">
+						</div>
+						<button type="submit">SEARCH</button>
+					</form>
+					<div class="col-sm-4">
+						<a href="">
+							<div class="thumbnail">
+								<img src="/lake-como.jpg" alt="...">
+								<div class="caption">
+									<h3>Highlight Activity</h3>
+									<h4>Tags: </h4> <p>some tags</p>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div id="map-itineraries">
+					</div>
 				</div>
 			</div>
 		</div>
