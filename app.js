@@ -80,3 +80,27 @@ app. directive('destMap', function() {
     }
   };
 });
+
+app. directive('itinMap', function() {
+  return {
+    restrict: 'E',
+    template: '<div></div>',
+    replace: true,
+    link: function(scope, element, attrs) {
+      var myLatLng = new google.maps.LatLng(28.070, 83.249);
+      var mapOptions = {
+        center: myLatLng,
+        zoom: 8,
+        maTypeId: google.maps.MapTypeId.ROADMAP
+      };
+      var map = new google.maps.Map(document.getElementById(attrs.id),
+        mapOptions);
+      var marker = new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        title: "My town"
+      });
+      marker.setMap(map);
+    }
+  };
+});
