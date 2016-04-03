@@ -2,6 +2,10 @@ body {
 	font-family: 'Oxygen', sans-serif;
 }
 
+.form-control, .btn, .thumbnail {
+	border-radius: 0;
+}
+
 /*------ HOME PAGE CENTERING ------*/
 html, body, .container-table {
 	height: 100%;
@@ -15,7 +19,7 @@ html, body, .container-table {
 	display: table-cell;
 	vertical-align: middle;
 }
-/*--------------------------------*/
+/*---------------------------------*/
 
 .navbar-default {
 	background-color: rgba(255,255,255,0);
@@ -32,7 +36,7 @@ html, body, .container-table {
 	min-height: 100%;
 }
 
-#splash-title {
+#home-title {
 	color: white;
 	font-size: 5.5em;
 	font-weight: bold;
@@ -45,7 +49,45 @@ html, body, .container-table {
 	font-weight: bold;
 }
 
-#destination-form-label {
+/*------- DESTINATION FORM --------*/
+#dest-form-label {
 	color: white;
 	font-weight: bold;
 }
+
+#dest-input {
+	border: 1px solid #fff;
+}
+
+#dest-input-btn {
+	background-color: rgba(50,50,50,.5);
+	color: white;
+}
+/*---------------------------------*/
+
+.content-page {
+	margin-top: 50px;
+}
+/*-- ACTIVITY THUMBNAILS (HORIZ.) --*/
+.thumbnail.right-caption > img {
+	float: left;
+	margin-right: 9px;
+	width: 30%;
+}
+
+.thumbnail.right-caption {
+	float: left;
+}
+
+.thumbnail.right-caption > .caption {
+	padding: 4px;
+}
+
+.caption > h3 {
+	margin-top: 0;
+}
+
+.caption > p {
+	margin-bottom: 0;
+}
+/*---------------------------------*/
