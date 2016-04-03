@@ -62,8 +62,8 @@
 					<form ng-submit="addDestination()">
 						<h3 id="destination-form-label">Where are you going today?</h3>
 						<div class="form-group">
-							<input type="text" placeholder="City, Country" ng-model="name"></input>
-						<button type="submit">SEARCH</button>
+							<input type="text" placeholder="City, Country" ng-model="name" />
+						<button type="submit">GO</button>
 						</div>
 						<div ng-repeat="destination in destinations">
 							<a href="#/destinations/{{$index}}">{{ destination.name }}</a>
@@ -82,14 +82,14 @@
 					<h1>{{ destination.name }}</h1>
 					<form class="form-inline">
 						<div class="form-group">
-							<input type="text" class="form-control" placeholder="Search Itineraries">
+							<input type="text" class="form-control" placeholder="Search Itineraries" />
 						</div>
 						<button type="submit">SEARCH</button>
 					</form>
 					<div class="col-sm-4">
-						<a href="">
+						<a href="#/itineraries/{{$index}}">
 							<div class="thumbnail">
-								<img src="/lake-como.jpg" alt="...">
+								<img src="/lake-como.jpg" alt="..." />
 								<div class="caption">
 									<h3>Highlight Activity</h3>
 									<h4>Tags: </h4> <p>some tags</p>
@@ -105,5 +105,35 @@
 			</div>
 		</div>
 	</script>
+
+	<!-- itinerary show page / activities index -->
+	<script type="text/ng-template" id="/itineraries.html">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-8">
+					<h1>Highlight Activity</h1>
+					<h3>Tags:</h3>
+					<h5>some tags</h5>
+					<div class="col-sm-8">
+						<div class="thumbnail">
+							<div class="activty-img">
+								<img src="/lake-como.jpg" alt="..." />
+							</div>
+							<div class="caption">
+								<h3>Activity Title</h3>
+								<h4>Tip: </h4> <p>here's a tip</p>
+								<h4>Address: </h4><p>123 Main St.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div id="map-activities">
+					</div>
+				</div>
+			</div>
+		</div>
+	</script>
+
 </body>
 </html>
