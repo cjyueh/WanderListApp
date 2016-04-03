@@ -11,6 +11,8 @@
 	<!-- angular -->
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
+	<!-- google maps -->
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPmqMfL8Y2GJJCvvdBMGO-HKjFAiXCoPw"></script>
 	<!-- custom -->
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script type="text/javascript" src="app.js"></script>
@@ -78,7 +80,7 @@
 	<script type="text/ng-template" id="/destinations.html">
 		<div class="container content-page">
 			<div class="row">
-				<div class="col-sm-8">
+				<div class="col-sm-7">
 					<h1>{{ destination.name }}</h1>
 					<form>
 						<div class="input-group">
@@ -86,7 +88,7 @@
 							<span class="input-group-btn"><button type="submit" class="btn btn-default">SEARCH</button></span>
 						</div>
 					</form>
-					<div class="col-sm-4">
+					<div class="col-sm-5">
 						<a href="#/itineraries/{{$index}}">
 							<div class="thumbnail">
 								<img src="/lake-como.jpg" alt="..." />
@@ -98,9 +100,8 @@
 						</a>
 					</div>
 				</div>
-				<div class="col-sm-4">
-					<div id="map-itineraries">
-					</div>
+				<div class="col-sm-5">
+					<dest-map id="map-dest"></dest-map>
 				</div>
 			</div>
 		</div>
@@ -110,7 +111,7 @@
 	<script type="text/ng-template" id="/itineraries.html">
 		<div class="container content-page">
 			<div class="row">
-				<div class="col-sm-8">
+				<div class="col-sm-7">
 					<h1>Highlight Activity</h1>
 					<h3>Tags:</h3>
 					<h5>some tags</h5>
@@ -123,7 +124,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-sm-4">
+				<div class="col-sm-5">
 					<div id="map-activities">
 					</div>
 				</div>

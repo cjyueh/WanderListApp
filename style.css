@@ -91,3 +91,9 @@ html, body, .container-table {
 	margin-bottom: 0;
 }
 /*---------------------------------*/
+
+#map-dest {
+	height: 600px;
+	width: 100%;
+	border: 1px solid #ccc;
+}
