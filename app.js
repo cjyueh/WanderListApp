@@ -81,7 +81,7 @@ app. directive('destMap', function() {
   };
 });
 
-app. directive('itinMap', function() {
+app.directive('itinMap', function() {
   return {
     restrict: 'E',
     template: '<div></div>',

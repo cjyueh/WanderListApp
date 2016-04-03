@@ -66,13 +66,14 @@ html, body, .container-table {
 /*---------------------------------*/
 
 .content-page {
+	border-top: 1px solid #ccc;
 	margin-top: 50px;
 }
 /*-- ACTIVITY THUMBNAILS (HORIZ.) --*/
 .thumbnail.right-caption > img {
 	float: left;
 	margin-right: 9px;
-	width: 30%;
+	width: 40%;
 }
 
 .thumbnail.right-caption {
@@ -95,5 +96,7 @@ html, body, .container-table {
 .maps {
 	height: 600px;
 	width: 100%;
-	border: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
 }
