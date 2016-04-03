@@ -63,7 +63,7 @@ app. directive('destMap', function() {
     template: '<div></div>',
     replace: true,
     link: function(scope, element, attrs) {
-      var myLatLng = new google.maps.LatLng(28.070, 83.249);
+      var myLatLng = new google.maps.LatLng(37.774, -122.431);
       var mapOptions = {
         center: myLatLng,
         zoom: 8,
@@ -87,7 +87,7 @@ app.directive('itinMap', function() {
     template: '<div></div>',
     replace: true,
     link: function(scope, element, attrs) {
-      var myLatLng = new google.maps.LatLng(28.070, 83.249);
+      var myLatLng = new google.maps.LatLng(37.774, -122.431);
       var mapOptions = {
         center: myLatLng,
         zoom: 8,
