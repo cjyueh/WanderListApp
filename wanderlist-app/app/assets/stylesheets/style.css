@@ -41,7 +41,7 @@ html, body, .container-table {
 	font-size: 5.5em;
 	font-weight: bold;
 	letter-spacing: .1em;
-	text-shadow: 0 0 3px #cccccc;
+	text-shadow: 0 0 1px #cccccc;
 }
 
 #tagline {
