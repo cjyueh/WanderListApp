@@ -6,7 +6,12 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
     .state('home', {
       url: '/home',
       templateUrl: 'home/_home.html',
-      controller: 'MainCtrl'
+      controller: 'MainCtrl',
+      resolve: {
+        destinationPromise: ['destinations', function(destinations) {
+          return destinations.getAll(); //call .getAll() to get all destinations from server to display in view
+        }]
+      }
     })
     //get destination show page (itineraries index page)
     .state('destinations', {
