@@ -1,13 +1,15 @@
 class DestinationsController < ApplicationController
-	# GET all the destinations as json
+	# show all the destinations
 	def index
 		respond_with Destination.all
 	end
-	# POST to create a new destination using params from form input
+
+	# create a new destination using params from form input
 	def create
 		respond_with Destination.create(destination_params)
 	end
-	# GET a destination using the id from params
+
+	# show a destination using the id from params
 	def show
 		respond_with Destination.find(params[:id])
 	end
