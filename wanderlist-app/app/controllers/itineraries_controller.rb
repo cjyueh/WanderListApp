@@ -9,7 +9,7 @@ class ItinerariesController < ApplicationController
 	# show an itinerary using the id from params
 	def show
 		destination = Destination.find(params[:destination_id])
-		intinerary = destination.Itinerary.find(params[:id])
+		itinerary = destination.Itinerary.find(params[:id])
 		respond_with destination, itinerary
 	end
 
@@ -28,7 +28,7 @@ class ItinerariesController < ApplicationController
 
 	# provide form to edit an existing itinerary
 	def edit
-		intinerary = Itinerary.find(params[:id])
+		itinerary = Itinerary.find(params[:id])
 	end
 
 	# updates an itinerary

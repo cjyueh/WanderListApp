@@ -3,13 +3,13 @@ Rails.application.routes.draw do
 
 	resources :destinations, only: [:create, :index, :show] do
 		resources :itineraries, :except => [:edit, :update, :destroy] do
-			resources :activities, :except => [:update, :destroy]
+			resources :activities, :except => [:show, :edit, :update, :destroy]
 		end
 	end
 
 	resources :itineraries, only: [:edit, :update, :destroy]
 
-	resources :activities, only: [:update, :destroy]
+	resources :activities, only: [:edit, :update, :destroy]
 
 	resources :users
 
