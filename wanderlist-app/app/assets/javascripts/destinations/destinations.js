@@ -14,5 +14,10 @@ app.factory('destinations', ['$http', function($http) {
       o.destinations.push(data);
     });
   };
+  o.get = function(id) {
+    return $http.get('/destinations/' + id + '.json').then(function(res) {
+      return res.data;
+    });
+  };
   return o;
 }]);

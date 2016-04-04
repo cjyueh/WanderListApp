@@ -17,7 +17,12 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
     .state('destinations', {
       url: '/destinations/{id}',
       templateUrl: 'destinations/_destinations.html',
-      controller: 'DestinationsCtrl'
+      controller: 'DestinationsCtrl',
+      resolve: {
+        destination: ['$stateParams', 'destinations', function($stateParams, destinations) {
+          return destinations.get($stateParams.id);
+        }]
+      }
     })
     //get itinerary show page (activities index page)
     .state('itineraries', {
