@@ -29,6 +29,18 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
       url: '/itineraries/{id}',
       templateUrl: 'itineraries/_itineraries.html',
       controller: 'ItinerariesCtrl'
+    })
+    //get login page
+    .state('login', {
+      url: '/users/login',
+      templateUrl: 'auth/_login.html',
+      controller: 'AuthCtrl'
+    })
+    //get signup page
+    .state('sign-up', {
+      url: '/users/sign-up',
+      templateUrl: 'auth/_sign-up.html',
+      controller: 'AuthCtrl'
     });
   $urlRouterProvider.otherwise('home');
 }]);
