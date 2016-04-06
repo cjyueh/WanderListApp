@@ -16,14 +16,14 @@
 			<ul class="nav navbar-nav navbar-right">
 				<li ng-hide="loggedIn()"><a href="#/users/sign-up">Sign Up</a></li>
 				<li ng-hide="loggedIn()"><a href="#/users/login">Log In</a></li>
-				<li ng-hide="loggedIn()" ng-hclass="dropdown">
-					<a href="#/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ user.username }}</a>
+				<li ng-show="loggedIn()" class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ user.username }}</a>
 					<ul class="dropdown-menu">
 						<li><a href="#">Edit Profile</a></li>
 						<li><a href="#">Create Itinerary</a></li>
 						<li><a href="#">View Itinerary History</a></li>
 						<li role="separator" class="divider"></li>
-						<li ng-hide="loggedIn()"><a ng-click="logout()">Log Out</a></li>
+						<li ng-show="loggedIn()"><a ng-click="logout()">Log Out</a></li>
 					</ul>
 				</li>
 			</ul>
