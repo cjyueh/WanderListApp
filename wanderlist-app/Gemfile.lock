@@ -50,6 +50,13 @@ GEM
     byebug (8.2.2)
     concurrent-ruby (1.0.1)
     debug_inspector (0.0.2)
+    devise (3.4.1)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      responders
+      thread_safe (~> 0.1)
+      warden (~> 1.2.3)
     erubis (2.7.0)
     execjs (2.6.0)
     globalid (0.3.6)
@@ -71,6 +78,7 @@ GEM
     multi_json (1.11.2)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
+    orm_adapter (0.5.0)
     pg (0.18.4)
     rack (1.6.4)
     rack-test (0.6.3)
@@ -129,6 +137,8 @@ GEM
       thread_safe (~> 0.1)
     uglifier (3.0.0)
       execjs (>= 0.3.0, < 3)
+    warden (1.2.6)
+      rack (>= 1.0)
     web-console (2.3.0)
       activemodel (>= 4.0)
       binding_of_caller (>= 0.7.2)
@@ -141,8 +151,8 @@ PLATFORMS
 DEPENDENCIES
   angular-rails-templates
   angular_rails_csrf
-  bcrypt (~> 3.1.7)
   byebug
+  devise (~> 3.4.0)
   jbuilder (~> 2.0)
   pg (~> 0.15)
   rails (= 4.2.5.1)
