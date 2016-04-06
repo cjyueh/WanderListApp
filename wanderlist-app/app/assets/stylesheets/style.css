@@ -26,6 +26,10 @@ html, body, .container-table {
 	border-color: rgba(255,255,255,0);
 }
 
+.dropdown:hover .dropdown-menu {
+display: block;
+}
+
 #home-photo {
 	background: url("vernazza.jpg") no-repeat center center fixed;
 	-webkit-background-size: cover;
