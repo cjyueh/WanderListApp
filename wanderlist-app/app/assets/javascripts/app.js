@@ -34,13 +34,23 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
     .state('login', {
       url: '/users/login',
       templateUrl: 'auth/_login.html',
-      controller: 'AuthCtrl'
+      controller: 'AuthCtrl',
+      onEnter: ['$state', 'Auth', function($state, Auth) {
+        Auth.currentUser().then(function() {
+          $state.go('home');
+        });
+      }]
     })
     //get signup page
     .state('sign-up', {
       url: '/users/sign-up',
       templateUrl: 'auth/_sign-up.html',
-      controller: 'AuthCtrl'
+      controller: 'AuthCtrl',
+      onEnter: ['$state', 'Auth', function($state, Auth) {
+        Auth.currentUser().then(function() {
+          $state.go('home');
+        });
+      }]
     });
   $urlRouterProvider.otherwise('home');
 }]);
