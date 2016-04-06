@@ -1,4 +1,4 @@
-var app = angular.module('WanderList', ['ui.router', 'templates']);
+var app = angular.module('WanderList', ['ui.router', 'templates', 'Devise']);
 
 app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
   $stateProvider
