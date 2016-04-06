@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
-	has_many :itineraries
-
-	def as_json(options = {})
-    super(options.merge(include: :itineraries))
-  end
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :trackable, :validatable
+  has_many :itineraries
 end

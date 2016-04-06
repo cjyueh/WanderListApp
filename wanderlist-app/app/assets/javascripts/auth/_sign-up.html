@@ -1,0 +1,26 @@
+<!-- sign-up form -->
+<div class="container content-page">
+	<div class="row">
+		<div class="col-sm-7">
+			<h1>Sign Up</h1>
+			<form ng-submit="register()">
+				<div class="input-group">
+					<input type="email" class="form-control" placeholder="Email" ng-model="user.email" />
+				</div>
+				<div class="input-group">
+					<input type="text" class="form-control" placeholder="Username" ng-model="user.username" />
+				</div>
+				<div class="input-group">
+					<input type="password" class="form-control" placeholder="Password" ng-model="user.password" />
+				</div>
+				<div class="input-group">
+					<input type="text" class="form-control" placeholder="Hometown" ng-model="user.hometown" />
+				</div>
+				<div class="input-group">
+					<input type="url" class="form-control" placeholder="Photo URL" ng-model="user.photo" />
+				</div>
+				<input type="submit" class="btn btn-default" value="Sign Up" />
+			</form>
+		</div>
+	</div>
+</div>

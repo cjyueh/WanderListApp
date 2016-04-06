@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
 	root to: "application#angular"
 
 	resources :destinations, only: [:create, :index, :show] do
@@ -11,9 +12,9 @@ Rails.application.routes.draw do
 
 	resources :activities, only: [:edit, :update, :destroy]
 
-	resources :users
+	# resources :users
 
-	get "/log-in", to: "sessions#new"
-	post "/sessions", to: "sessions#create"
-	delete "/log-out", to: "sessions#destroy", as: "sign_out"
+	# get "/log-in", to: "sessions#new"
+	# post "/sessions", to: "sessions#create"
+	# delete "/log-out", to: "sessions#destroy", as: "sign_out"
 end
