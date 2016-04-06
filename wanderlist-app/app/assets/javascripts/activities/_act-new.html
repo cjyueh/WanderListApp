@@ -16,11 +16,11 @@
 		<div>
 			<h5>Was this activity the highlight of your itinerary?</h5>
 			<label class="radio-inline">
-				<input type="radio" name="highlight" id="inlineRadio1" value="true" ng-model="activity.boolean" />Yes
+				<input type="radio" name="highlight" id="inlineRadio1" value="true" ng-model="activity.boolean" required />Yes
 			</label>
 			<label class="radio-inline">
 				<input type="radio" name="not-highlight" id="inlineRadio1" value="false" ng-model="activity.boolean" />No
 			</label>
 		</div>
-		<button class="btn btn-default" id="dest-input-btn" ng-click="showActForm()">ENTER</button>]
+		<button class="btn btn-default" id="dest-input-btn" ng-show="showActForm()">ENTER</button>]
 </ng-form>
