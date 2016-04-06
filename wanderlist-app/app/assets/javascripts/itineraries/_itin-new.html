@@ -3,13 +3,15 @@
 	<div class="row">
 		<div class="col-sm-7">
 			<h1>Add an Itinerary</h1>
-			<form ng-submit="addItinerary()">
+			<form ng-submit="addItinerary()" novalidate>
 				<div class="input-group">
 					<label for="dest-input">Create Itinerary For:</label>
 					<input type="text" class="form-control" id="dest-input" placeholder="Destination City, Country" ng-model="destination.name" autofocus />
 					<span class="input-group-btn"><button class="btn btn-default" id="dest-input-btn" ng-click="showActForm()">ENTER</button></span>
 				</div>
-				
+				<div ng-include="'activities/_act-new.html'">
+					
+				</div>
 				<input type="submit" class="btn btn-default" value="CREATE ITINERARY" />
 			</form>
 		</div>
