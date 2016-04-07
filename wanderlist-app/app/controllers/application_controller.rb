@@ -11,5 +11,8 @@ class ApplicationController < ActionController::Base
 	private
 	def configure_permitted_parameters
 		devise_parameter_sanitizer.for(:sign_up) << :username
+		devise_parameter_sanitizer.for(:sign_up) << :hometown
+		devise_parameter_sanitizer.for(:sign_up) << :photo
+
 	end
 end
