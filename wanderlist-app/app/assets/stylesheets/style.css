@@ -109,3 +109,7 @@ display: block;
 	margin-top: 30px;
 	width: 100%;
 }
+
+.profile-photo {
+	max-width: 200px;
+}
