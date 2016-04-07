@@ -3,8 +3,8 @@ Rails.application.routes.draw do
 	root to: "application#angular"
 
 	resources :destinations, only: [:create, :index, :show] do
-		resources :itineraries, :except => [:edit, :update, :destroy] do
-			resources :activities, :except => [:show, :edit, :update, :destroy]
+		resources :itineraries, :except => [:new, :edit, :update, :destroy] do
+			resources :activities, :except => [:new, :show, :edit, :update, :destroy]
 		end
 	end
 

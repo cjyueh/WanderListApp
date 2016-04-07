@@ -30,7 +30,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
       templateUrl: 'itineraries/_itineraries.html',
       controller: 'ItinerariesCtrl'
     })
-    //get login page
+    //get login form page
     .state('login', {
       url: '/users/login',
       templateUrl: 'auth/_login.html',
@@ -41,7 +41,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
         });
       }]
     })
-    //get signup page
+    //get signup form page
     .state('sign-up', {
       url: '/users/sign-up',
       templateUrl: 'auth/_sign-up.html',
@@ -61,7 +61,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
   $urlRouterProvider.otherwise('home');
 }]);
 
-app. directive('destMap', function() {
+app.directive('destMap', function() {
   return {
     restrict: 'E',
     template: '<div></div>',

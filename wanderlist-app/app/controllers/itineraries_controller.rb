@@ -13,12 +13,6 @@ class ItinerariesController < ApplicationController
 		respond_with destination, itinerary
 	end
 
-	# provide form to create a new itinerary
-	def new
-		destination = Destination.find(params[:destination_id])
-		itinerary = destination.itineraries.new
-	end
-
 	# create a new itinerary for a destination using params from form input
 	def create
 		destination = Destination.find(params[:destination_id])

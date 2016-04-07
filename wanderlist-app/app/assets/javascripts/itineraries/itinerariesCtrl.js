@@ -11,10 +11,11 @@ app.controller('ItinerariesCtrl', ['$scope', '$stateParams', 'itineraries', func
 
   //   });
   // };
+  
   //add a new itinerary
   $scope.addItinerary = function() {
     if(!$scope.body || $scope.body === '') { return; }
-    $scope.itineraries.push({
+    itineraries.create({
       destination: [{name: $scope.destination.name}],
       activity: [{
         title: $scope.activity.title,
