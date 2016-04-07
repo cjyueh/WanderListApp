@@ -17,7 +17,6 @@ app.controller('ItinerariesCtrl', ['$scope', '$stateParams', 'destinations', 'it
   //add a new itinerary
   $scope.addItinerary = function() {
     if(!$scope.body || $scope.body === '') { return; }
-    destinations.getAll();
     itineraries.create({
       activity: [{
         title: $scope.destination.itinerary.activity.title,
