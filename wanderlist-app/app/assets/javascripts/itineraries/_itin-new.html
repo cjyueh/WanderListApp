@@ -4,13 +4,17 @@
 		<div class="col-sm-7">
 			<h1>Add an Itinerary</h1>
 			<form ng-submit="addItinerary()" novalidate>
+				<label for="dest-input">Create Itinerary For:</label>
 				<div class="input-group">
-					<label for="dest-input">Create Itinerary For:</label>
-					<input type="text" class="form-control" id="dest-input" placeholder="Destination City, Country" ng-model="destination.name" autofocus />
-					<span class="input-group-btn"><button class="btn btn-default" id="dest-input-btn" ng-show="showActForm()">ENTER</button></span>
+					<input type="text" class="form-control" placeholder="Destination City, Country" ng-model="itinerary.destination.name" autofocus />
+					<span class="input-group-btn"><button type="submit" class="btn btn-default" ng-hide="showActForm()">ENTER</button></span>
 				</div>
-				<ng-include src="'activities/_act-new.html'"></ng-include>
-				<input type="submit" class="btn btn-default" value="CREATE ITINERARY" />
+				<ng-include src="'activities/_act-new.html'" ng-show="showActForm()"></ng-include>
+				<div class="form-group">
+					<label for="itin-tag">Tags and Keywords</label>
+					<input type="text" class="form-control" id="itin-tag" placeholder="Ex. 'outdoors', 'kid-friendly', 'late-night'" ng-model="itinerary.tags" />
+				</div>
+				<button type="submit" class="btn btn-default">CREATE ITINERARY</button>
 			</form>
 		</div>
 	</div>

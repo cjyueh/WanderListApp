@@ -26,7 +26,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
     })
     //get itinerary show page (activities index page)
     .state('itineraries', {
-      url: '/itineraries/{id}',
+      url: '/destinations/{id}/itineraries/{iid}',
       templateUrl: 'itineraries/_itineraries.html',
       controller: 'ItinerariesCtrl'
     })
@@ -51,6 +51,12 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
           $state.go('home');
         });
       }]
+    })
+    //get new itinerary form page
+    .state('new-itin-form', {
+      url: '/itinerary/new',
+      templateUrl: 'itineraries/_itin-new.html',
+      controller: 'ItinerariesCtrl'
     });
   $urlRouterProvider.otherwise('home');
 }]);
