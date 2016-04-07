@@ -10,10 +10,6 @@
 					<input type="text" class="form-control" id="dest-input" placeholder="City, Country" ng-model="name" autofocus />
 					<span class="input-group-btn"><button type="submit" class="btn btn-default" id="dest-input-btn">GO!</button></span>
 				</div>
-				<!-- <select class="form-control c-select" ng-repeat="destination in destinations">
-					<option selected=""d>Select a Destination</option>
-					<option value="{{ destination.name }}">{{ destination.name }}</option>
-				</select> -->
 				<div ng-repeat="destination in destinations">
 					<a href="#/destinations/{{destination.id}}">{{ destination.name }}</a>
 				</div>

@@ -2,7 +2,9 @@ var app = angular.module('WanderList');
 
 app.factory('itineraries', ['$http', function($http) {
   var o = {
-    itineraries: []
+    itineraries: [{
+      activities: []
+    }]
   };
   o.getAll = function() {
     return $http.get('/destinations/' + id + 'itineraries' + iid + '.json').success(function(data) {
@@ -11,7 +13,7 @@ app.factory('itineraries', ['$http', function($http) {
   };
   o.create = function(itinerary) {
     console.log('create function');
-    return $http.post('/destinations/' + id + 'itineraries' + iid + '.json', itinerary).success(function(data) {
+    return $http.post('/destinations/' + id + '/itineraries/' + iid + '.json', itinerary).success(function(data) {
       o.itineraries.push(data);
     });
   };

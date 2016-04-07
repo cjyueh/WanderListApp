@@ -1,6 +1,8 @@
 var app = angular.module('WanderList');
 
-app.controller('ItinerariesCtrl', ['$scope', '$stateParams', 'itineraries', function($scope, $stateParams, itineraries) {
+app.controller('ItinerariesCtrl', ['$scope', '$stateParams', 'destinations', 'itineraries', function($scope, $stateParams, destinations, itineraries) {
+  //get all destinations
+  $scope.destinations = destinations.destinations;
   //get an itinerary from all itineraries using its id
   $scope.itinerary = itineraries.itineraries[$stateParams.id];
 
@@ -11,19 +13,19 @@ app.controller('ItinerariesCtrl', ['$scope', '$stateParams', 'itineraries', func
 
   //   });
   // };
-  
+
   //add a new itinerary
   $scope.addItinerary = function() {
     if(!$scope.body || $scope.body === '') { return; }
+    destinations.getAll();
     itineraries.create({
-      destination: [{name: $scope.destination.name}],
       activity: [{
-        title: $scope.activity.title,
-        tip: $scope.activity.tip,
-        location: $scope.activity.location,
-        photo: $scope.activity.photo,
-        highlight: $scope.activity.highlight}],
-      tags: $scope.tags
+        title: $scope.destination.itinerary.activity.title,
+        tip: $scope.destination.itinerary.activity.tip,
+        location: $scope.destination.itinerary.activity.location,
+        photo: $scope.destination.itinerary.activity.photo,
+        highlight: $scope.destination.itinerary.activity.highlight}],
+      tags: $scope.destination.itinerary.tags
     });
     $scope.body = '';
   };
