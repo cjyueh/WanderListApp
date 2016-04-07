@@ -7,9 +7,9 @@
 				<label for="dest-input">Create Itinerary For:</label>
 				<div class="input-group">
 					<input type="text" class="form-control" placeholder="Destination City, Country" ng-model="itinerary.destination.name" autofocus />
-					<span class="input-group-btn"><button type="submit" class="btn btn-default" ng-hide="showActForm()">ENTER</button></span>
+					<span class="input-group-btn"><button class="btn btn-default" ng-click="showActForm=true">ENTER</button></span>
 				</div>
-				<ng-include src="'activities/_act-new.html'" ng-show="showActForm()"></ng-include>
+				<ng-include src="'activities/_act-new.html'" ng-show="showActForm"></ng-include>
 				<div class="form-group">
 					<label for="itin-tag">Tags and Keywords</label>
 					<input type="text" class="form-control" id="itin-tag" placeholder="Ex. 'outdoors', 'kid-friendly', 'late-night'" ng-model="itinerary.tags" />
