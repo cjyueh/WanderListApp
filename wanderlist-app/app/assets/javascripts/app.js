@@ -53,8 +53,8 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
       }]
     })
     //get user profile page
-    .state('user-profile', {
-      url: '/users/{id}',
+    .state('profile', {
+      url: '/profile',
       templateUrl: 'users/_user-show.html',
       controller: 'UsersCtrl'
     })
