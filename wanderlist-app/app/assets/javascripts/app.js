@@ -52,6 +52,12 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
         });
       }]
     })
+    //get user profile page
+    .state('user-profile', {
+      url: '/users/{id}',
+      templateUrl: 'users/_user-show.html',
+      controller: 'UsersCtrl'
+    })
     //get new itinerary form page
     .state('new-itin-form', {
       url: '/itinerary/new',
