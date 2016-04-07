@@ -5,6 +5,10 @@
 			<h1>Add an Itinerary</h1>
 			<form ng-submit="addItinerary()" novalidate>
 				<label for="dest-input">Create Itinerary For:</label>
+				<!-- <select class="form-control c-select" ng-repeat="destination in destinations">
+					<option selected>Select a Destination</option>
+					<option value="{{ destination.name }}">{{ destination.name }}</option>
+				</select> -->
 				<div class="input-group">
 					<input type="text" class="form-control" placeholder="Destination City, Country" ng-model="destination.name" autofocus required />
 					<span class="input-group-btn"><button class="btn btn-default" ng-click="showActForm=true">ENTER</button></span>
