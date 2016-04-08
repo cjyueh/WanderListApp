@@ -2,21 +2,15 @@ var app = angular.module('WanderList');
 
 app.controller('ItinerariesCtrl', ['$scope', '$stateParams', 'destinations', 'itineraries', function($scope, $stateParams, destinations, itineraries) {
   //get all destinations
+  destinations.getAll();
+  $scope.destination = {};
   $scope.destinations = destinations.destinations;
   //get an itinerary from all itineraries using its id
-  $scope.itinerary = itineraries.itineraries[$stateParams.id];
-
-  //add a new activity
-  // $scope.addActivity = function() {
-  //   if(!$scope.body || $scope.body === '') { return; }
-  //   $scope.itinerary.activities.push({
-
-  //   });
-  // };
+  // $scope.itinerary = itineraries.itineraries[$stateParams.id];
 
   //add a new itinerary
   $scope.addItinerary = function() {
-    if(!$scope.body || $scope.body === '') { return; }
+    console.log("destination", $scope.destination, $scope.destination.id);
     itineraries.create({
       activity: [{
         title: $scope.destination.itinerary.activity.title,
