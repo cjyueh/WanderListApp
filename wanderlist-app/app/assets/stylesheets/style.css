@@ -121,9 +121,15 @@ display: block;
 
 .profile-content {
 	display: inline;
+	line-height: 30px;
 	/*vertical-align: bottom;*/
 }
 
 p.profile-content {
 	vertical-align: bottom;
 }
+
+/*.textContainer {
+	position: relative;
+	top: 7px;
+}*/
