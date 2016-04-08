@@ -5,8 +5,6 @@ app.controller('ItinerariesCtrl', ['$scope', '$stateParams', 'destinations', 'it
   destinations.getAll();
   $scope.destination = {};
   $scope.destinations = destinations.destinations;
-  //get an itinerary from all itineraries using its id
-  // $scope.itinerary = itineraries.itineraries[$stateParams.id];
 
   //add a new itinerary
   $scope.addItinerary = function() {

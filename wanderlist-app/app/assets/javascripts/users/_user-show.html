@@ -1,29 +1,29 @@
 <!-- user show page -->
-<div class="container content-page">
+<div class="container content-page content-center">
 	<div class="row">
 		<div class="list-group">
 			<div class="row">
 				<div class="col-sm-3">
 					<img src="{{ user.photo }}" class="profile-photo" />
 				</div>
-				<div class="col-sm-4">
+				<div class="col-sm-6">
 					<h1>{{ user.username }}</h1>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-sm-2">
-					<h3>Email: </h3>
+				<div class="col-sm-offset-3 col-sm-2">
+					<h3 class="profile-content">Email: </h3>
 				</div>
-				<div class="col-sm-5">
-					<p>{{ user.email }}</p>
+				<div class="col-sm-4">
+					<p class="profile-content">{{ user.email }}</p>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-sm-2">
-					<h3>Hometown: </h3>
+				<div class="col-sm-offset-3 col-sm-2 ">
+					<h3 class="profile-content">Hometown: </h3>
 				</div>
-				<div class="col-sm-5">
-					<p>{{ user.hometown }}</p>
+				<div class="col-sm-4">
+					<p class="profile-content">{{ user.hometown }}</p>
 				</div>
 			</div>
 		</div>
