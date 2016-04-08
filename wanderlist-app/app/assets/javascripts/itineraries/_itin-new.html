@@ -13,11 +13,13 @@
 						<span class="input-group-btn"><div class="btn btn-default" ng-click="showActForm=true">ENTER</div></span>
 					</div>
 				</div>
+
 				<ng-include src="'activities/_act-new.html'" ng-show="showActForm"></ng-include>
+
 				<button class="btn btn-default" ng-show="showActForm">ADD MORE ACTIVITIES</button>
 				<div class="form-group">
 					<label for="itin-tag">Tags and Keywords</label>
-					<input type="text" class="form-control" id="itin-tag" placeholder="Ex. 'outdoors', 'kid-friendly', 'late-night'" ng-model="tags" ng-required="true" />
+					<input type="text" class="form-control" id="itin-tag" placeholder="Ex. 'outdoors', 'kid-friendly', 'late-night'" ng-model="destination.itinerary.tags" />
 				</div>
 				<button type="submit" class="btn btn-default">CREATE ITINERARY</button>
 			</form>

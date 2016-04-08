@@ -6,7 +6,7 @@ app.factory('itineraries', ['$http', function($http) {
       activities: []
     }]
   };
-  o.getAll = function() {
+  o.getAll = function(id, iid) {
     return $http.get('/destinations/' + id + 'itineraries' + iid + '.json').success(function(data) {
       angular.copy(data, o.itineraries); //copy list of itineraries to client-side itineraries object
     });
