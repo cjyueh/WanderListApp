@@ -10,8 +10,11 @@ app.controller('ItinerariesCtrl', ['$scope', '$stateParams', 'destinations', 'it
 
   //add a new itinerary
   $scope.addItinerary = function() {
-    console.log("destination", $scope.destination, $scope.destination.id);
-    itineraries.create({
+    console.log("destination", $scope.destination, $('#destSelect').val());
+    var destId = $('#destSelect').val();
+    itineraries.create(
+      destId,
+      {
       activity: [{
         title: $scope.destination.itinerary.activity.title,
         tip: $scope.destination.itinerary.activity.tip,
