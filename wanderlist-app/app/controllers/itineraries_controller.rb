@@ -15,17 +15,13 @@ class ItinerariesController < ApplicationController
 
 	# create a new itinerary for a destination using params from form input
 	def create
-		# binding.pry
 		destId = params[:destination_id]
 		destination = Destination.find_by_id(destId)
-		itinerary = Itinerary.create(itinerary_params)
-		activity = Activity.create(activity_params)
-		destination << itinerary
-		destination.save
-		itinerary << activity
-		itinerary.save
-		binding.pry
+		itinerary = Itinerary.create({tags: itinerary_params[:tags].split(" ")})
+		a = activity_params.first
+		activity = itinerary.activities.create({title: a[:title], tip: a[:tip], location: a[:location], photo: a[:photo], highlight: a[:highlight]})
 		respond_with itinerary
+		# redirect_to destination_path(destination)
 	end
 
 	# provide form to edit an existing itinerary
