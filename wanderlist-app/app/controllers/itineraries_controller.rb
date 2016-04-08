@@ -21,7 +21,6 @@ class ItinerariesController < ApplicationController
 		a = activity_params.first
 		activity = itinerary.activities.create({title: a[:title], tip: a[:tip], location: a[:location], photo: a[:photo], highlight: a[:highlight]})
 		respond_with itinerary
-		# redirect_to destination_path(destination)
 	end
 
 	# provide form to edit an existing itinerary

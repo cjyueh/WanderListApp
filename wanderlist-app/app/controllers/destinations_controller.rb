@@ -11,7 +11,11 @@ class DestinationsController < ApplicationController
 
 	# show a destination using the id from params
 	def show
-		respond_with Destination.find(params[:id])
+		@destination = Destination.find(params[:id])
+		@itineraries = @destination.itineraries
+		object = {:destination => @destination, :itineraries => @itineraries}
+		puts object
+		respond_with @destination, object
 	end
 
 	private
